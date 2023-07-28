@@ -627,18 +627,19 @@ section {
        
     }
     .more-vehicles{
-        width:100%;
+        width:80%;
     }
     .more-vehicles .grid-container {
         display: grid;
         grid-template-columns: repeat(2, 1fr); 
         gap: 15px;
-        width: 100%;
+        width: 80%;
       }
       .reviews{
         display: grid;
         grid-template-columns: repeat(1, 1fr);
         gap: 1rem;
+        width:80%;
     }
     .reviews .review-box img{
         width: 250px;
@@ -663,7 +664,7 @@ section {
         font-size: 50%;
     }  
     .more-vehicles{
-        width:100%;
+        width:70%;
     }
     .more-vehicles .grid-container {
         display: grid;
@@ -671,6 +672,55 @@ section {
         gap: 15px;
         width: 100%;
       }
+      .subscribe{
+        width: 70%;
+    padding: 4rem;
+    text-align: center;
+    background: url(../image/carbg.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+ }
+
+ .subscribe h3{
+    color: black;
+    font-size: 2rem;
+ }
+
+ .subscribe p{
+    color: gray;
+    font-size: 1rem;
+    padding: 0.8rem 0;
+}
+
+.subscribe form{
+    margin: 0.8rem auto;
+    max-width: 60rem;
+    height: 4rem;
+    display: flex;
+    overflow: hidden;
+    border-radius: 4rem;
+}
+
+.subscribe form input[type="email"]{
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: black;
+    text-transform: none;
+    padding: 0 2rem;
+}
+
+.subscribe form input[type="submit"]{
+    height: 100%;
+    width: 17rem;
+    font-size: 1.8rem;
+    color: black;
+    cursor: pointer;
+}
+
+.subscribe form input[type="submit"]:hover{
+    background:yellow;
+}
     
 } 
 
