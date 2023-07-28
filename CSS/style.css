@@ -546,7 +546,7 @@ section {
         padding: 2rem;
     }
     .more-vehicles{
-        width:100%;
+        width:90%;
     }
     .more-vehicles .grid-container {
         display: grid;
@@ -558,9 +558,10 @@ section {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 1rem;
+        width:90%;
     }
     .reviews .review-box img{
-        width: 400px;
+        width: 300px;
         height: 225px;
         
         
@@ -664,16 +665,16 @@ section {
         font-size: 50%;
     }  
     .more-vehicles{
-        width:70%;
+        width:60%;
     }
     .more-vehicles .grid-container {
         display: grid;
         grid-template-columns: repeat(1, 1fr); 
         gap: 15px;
-        width: 100%;
+        width: 60%;
       }
       .subscribe{
-        width: 70%;
+        width: 83%;
     padding: 4rem;
     text-align: center;
     background: url(../image/carbg.png) no-repeat;
@@ -721,6 +722,25 @@ section {
 .subscribe form input[type="submit"]:hover{
     background:yellow;
 }
+.reviews{
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+    width:83%;
+}
+.reviews .review-box img{
+    width: 250px;
+    height: 175px;
+    
+    
+}
+.reviews .review-box .content{
+    font-size: 1rem;
+    padding: 1rem;
+    text-align: center;
+    border-radius: .4rem;
+}
+ 
     
 } 
 
