@@ -1,0 +1,676 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:none;
+    outline:none;
+    border:none;
+    text-decoration:none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+    
+}
+
+html{
+    font-size: 62%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 7rem;
+    background-color: beige;
+}
+.header{
+    position: fixed;
+    top:0;left:0;right:0;
+    z-index: 999;
+    background-color: whitesmoke;
+     display: flex; 
+    justify-content:space-between;
+    align-items: flex-start;
+    padding:2rem 9%;
+    font-size: 1.7rem;
+}
+#menubar{
+    display: none;
+    font-size: 2.5rem;
+    cursor:pointer;
+}
+
+.header .logo{
+   font-size: 2.5rem;
+   font-weight: bolder;
+   color:black;
+}
+.header .logo span{
+   color:gray;
+}
+.header .navbar a{
+    font-size: 1.7rem;
+    margin:0 2rem;
+    color:black;
+}
+.header .navbar a:hover{
+    color:red;
+}
+.header .btn{
+    display:inline-block;
+    background-color:gray;
+    color:black;
+    padding:.8rem 3rem;
+    font-size: 1.7rem;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 21px ;
+}
+
+.header #login-btn i{
+    font-size: 2.5rem;
+    color:black;
+    cursor:pointer;
+    display: none;
+}
+#login-btn .btn:hover{
+    color: red;
+    
+}
+.header.active{
+    padding:2rem,9%;
+    box-shadow:0 1rem 1rem whitesmoke;
+}
+
+.login-form-container {
+    position: fixed;
+    top: -105%;
+    left: 0;
+    z-index: 1000;
+    height: 100%;
+    width: 100%;
+    background: rgba(255, 255, 255, .9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+.login-form-container.active {
+    top: 0;
+    opacity: 1;
+}
+
+.login-form-container form {
+    padding: 2rem;
+    margin: 2rem;
+    border-radius: 0.5rem;
+    background-color:aliceblue;
+    text-align: center;
+    width: 40rem;
+}
+
+.login-form-container form .buttons {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.login-form-container form .btn {
+    display: block;
+    width: 100%;
+    margin: .5rem 0;
+}
+
+.login-form-container form h3 {
+    color: black;
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+    text-transform: uppercase;
+}
+
+.login-form-container form .box {
+    margin: .7rem 0;
+    width: 100%;
+    text-transform: none;
+    color: black;
+    font-size: 1.2rem;
+    padding: 1rem 1.2rem;
+    border-radius: 0.5rem;
+}
+
+.login-form-container form p {
+    padding: 1rem 0;
+    font-size: 1.5rem;
+    color: black;
+}
+
+.login-form-container form p a {
+    color:blue;
+    text-decoration:none;
+}
+
+.login-form-container #close-login-btn {
+    position: absolute;
+    top: 1.5rem;
+    right: 2.5rem;
+    font-size: 5rem;
+    color: black;
+    cursor: pointer;
+
+}
+.buttons a{
+    font-size:2rem;
+    color: blue;
+}
+
+section {
+    padding: 2rem 9%;
+}
+.home {
+    padding-top: 10rem;
+    text-align: center;
+    overflow-x: hidden;
+}
+
+.home h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: black;
+    font-family: 'Oswald', sans-serif;
+}
+
+.home img {
+    width: 100%;
+    margin: 2rem 0;
+}
+.home a{
+    font-size: 3rem;
+    text-decoration: none;
+    color:green;
+}
+.icons-container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+    background: whitesmoke;
+}
+
+.icons-container .icons {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 2rem;
+    background: whitesmoke;
+    border-radius: .5rem;
+}
+
+.icons-container .icons i {
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    background: whitesmoke;
+    color: black;
+    text-align: center;
+}
+
+.icons-container .icons .content h3 {
+    color:green;
+    font-size: 2.5rem;
+}
+
+.icons-container .icons .content p {
+    font-size: 1.5rem;
+}
+
+.icons-container .icons:hover {
+    background: grey;
+}
+
+.icons-container .icons:hover i {
+    background: yellow;
+}
+
+.icons-container .icons:hover .content h3 {
+    color: whitesmoke;
+}
+
+.icons-container .icons:hover .content p {
+    color: whitesmoke;
+}
+
+.vehicles{
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+.heading {
+    text-align: center;
+    padding-bottom: 2rem;
+    font-size: 4.5rem;
+}
+.vehicles .box .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.vehicles .box .content .btn{
+    font-size:2rem;
+    color: green;
+}
+.vehicles .box .content .btn:hover{
+    
+    color: red;
+}
+.vehicles .box .content h3{
+    color: black;
+    font-size: 2rem;
+    margin:2px;
+    padding:0px;
+}
+.vehicles .box .content .price span{
+    color: red;
+    font-size: 2rem;
+    margin:2px;
+    padding:0px;
+}
+.vehicles .box .content p{
+    margin:2px;
+    padding:2px;
+    font-size:2rem;
+
+}
+.vehicles .box .content p span{
+    color:grey;
+    margin:2px;
+    padding:2px;
+}
+.more-vehicles .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 15px;
+    width: 100%;
+  }
+  
+  .more-vehicles .grid-item {
+    background-color: #f0f0f0;
+    padding: 20px;
+    text-align: center;
+    font-size: 24px;
+    height: 250px;
+    width:300px;
+  }
+  .more-vehicles .grid-item img{
+    height: 230px;
+    width:300px;
+  }
+  .more-vehicles .grid-item a{
+    text-decoration: none;
+    color:green;
+    
+  }
+  .more-vehicles .grid-item a:hover{
+    
+    color:blue;
+
+  }
+  .more-vehicles h1{
+    color:black;
+    font-size: 3rem;
+    text-align: center;
+  }
+.services .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(40rem, 1fr));
+    gap: 1.5rem;
+}
+
+.services .box-container .box{
+    text-align: center;
+    padding: 2rem;
+    border-radius: .5rem;
+}
+
+.services .box-container .box i{
+    height: 6rem;
+    width: 6rem;
+    line-height: 6rem;
+    font-size: 2.5rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.services .box-container .box h3{
+    color: black;
+    font-size: 2.2rem;
+}
+
+.services .box-container .box p{
+    color: gray;
+    font-size: 1.4rem;
+    padding: 1rem 0;
+    line-height: 1.8;
+}
+
+.services .box-container .box:hover{
+    background:gray;
+}
+
+.services .box-container .box:hover h3{
+    color:wheat;
+}
+
+.services .box-container .box:hover p{
+   color: white;
+}
+.subscribe{
+    padding: 6rem;
+    text-align: center;
+    background: url(../image/carbg.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+ }
+
+ .subscribe h3{
+    color: black;
+    font-size: 3rem;
+ }
+
+ .subscribe p{
+    color: gray;
+    font-size: 1.5rem;
+    padding: 1rem 0;
+}
+
+.subscribe form{
+    margin: 1rem auto;
+    max-width: 60rem;
+    height: 5rem;
+    display: flex;
+    overflow: hidden;
+    border-radius: 5rem;
+}
+
+.subscribe form input[type="email"]{
+    height: 100%;
+    width: 100%;
+    font-size: 1.6rem;
+    color: black;
+    text-transform: none;
+    padding: 0 2rem;
+}
+
+.subscribe form input[type="submit"]{
+    height: 100%;
+    width: 17rem;
+    font-size: 1.8rem;
+    color: black;
+    cursor: pointer;
+}
+
+.subscribe form input[type="submit"]:hover{
+    background:yellow;
+}
+
+
+.reviews{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+.reviews .review-box img{
+    width: 500px;
+    height: 275px;
+    
+    
+}
+.reviews .review-box .content{
+    font-size: 1.3rem;
+    padding: 2rem;
+    text-align: center;
+    border-radius: .5rem;
+}
+
+
+
+.contact .row{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.contact .row .map{
+    flex: 1 1 42rem;
+    width: 100%;
+    padding: 2rem;
+    
+    border-radius: .5rem;
+   
+}
+
+.contact .row form{
+    flex: 1 1 42rem;
+    width: 100%;
+    padding: 2rem;
+    
+    border-radius: .5rem;
+    box-shadow: 1rem 2rem 3rem whitesmoke;
+    text-align: center;
+}
+
+.contact .row form h3{
+    color: black;
+    font-size: 3rem;
+}
+
+.contact .row form .box{
+    margin: .7rem 0;
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.6rem;
+    color: black;
+    text-transform: none;
+    border-radius: .5rem;
+    background-color: aliceblue;
+    border-radius: 3px;
+}
+
+.contact .row form textarea{
+    height: 15rem;
+    resize: none;
+}
+.contact .row form .btn{
+    font-size: 3rem;
+    color: black;
+}
+.contact .row form .btn:hover{
+    color: green;
+}
+.footer{
+    background:whitesmoke;
+}
+
+.footer .footer-box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    gap: 1.5rem;
+}
+
+.footer .footer-box-container .box h3{
+    color: black;
+    font-size: 2.2rem;
+    padding: 1rem 0;
+}
+
+.footer .footer-box-container .box a{
+    color: blue;
+    font-size: 1.4rem;
+    padding: 1rem 0;
+    display: block;
+}
+
+.footer .footer-box-container .box a i{
+    padding-right: .5rem;
+    color: black;
+}
+
+.footer .footer-box-container .box a:hover i{
+    padding-right: 2rem;
+}
+
+.footer .copyright{
+    color:black;
+    padding-top: 2.5rem;
+    border-top: black;
+    margin-top: 2rem;
+    font-size: 1.5rem;
+}
+
+
+
+
+
+/* media queries */
+ @media(max-width:951px){
+    html{
+        font-size: 55%;
+    }
+    .header{
+        padding:2rem;
+    }
+    .header.active {
+        padding: 2rem;
+    }
+    
+    section {
+        padding: 2rem;
+    }
+    .more-vehicles{
+        width:100%;
+    }
+    .more-vehicles .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px;
+        width: 100%;
+      }
+      .reviews{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+    .reviews .review-box img{
+        width: 400px;
+        height: 225px;
+        
+        
+    }
+    .reviews .review-box .content{
+        font-size: 1.3rem;
+        padding: 1.7rem;
+        text-align: center;
+        border-radius: .5rem;
+    }
+      
+}
+@media(max-width:768px ){
+    .header #login-btn i{
+     display: block;
+    }
+    .header #login-btn .btn{
+     display: none;
+    }
+    .header .navbar {
+     position: absolute;
+     top: 99px;
+     left:0;
+     right:0;
+     clip-path: polygon(0 0,100% 0,100% 0,0 0);
+    }
+    .header .navbar a{
+     display: block;
+     margin:2rem;
+     font-size: 2rem;;
+    }
+    .header .navbar.active{
+     clip-path: polygon(0 0,100% 0,100% 100%,0 100%);
+    }
+    #menubar{
+     display: block;
+     font-size: 2.5rem;
+     cursor: pointer;
+ 
+    }
+    #menubar.fa-bars{
+     transform: rotate(180deg);
+    }
+    .header.active{
+     padding:2rem;
+    }
+    .vehicles .box img{
+        width: 75%;
+        height:75%;
+    }
+    .vehicles .box .content h3{
+       font-size: 1.5rem;
+    }
+    .vehicles .box .content .price span{
+        font-size: 1rem;
+    }
+    .vehicles .box .content p{
+        
+        font-size:1rem;
+    
+    }
+    .vehicles .box .content .btn{
+        font-size:1rem;
+       
+    }
+    .more-vehicles{
+        width:100%;
+    }
+    .more-vehicles .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 15px;
+        width: 100%;
+      }
+      .reviews{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 1rem;
+    }
+    .reviews .review-box img{
+        width: 250px;
+        height: 175px;
+        
+        
+    }
+    .reviews .review-box .content{
+        font-size: 1rem;
+        padding: 1rem;
+        text-align: center;
+        border-radius: .4rem;
+    }
+     
+    
+        
+    }
+ 
+
+@media(max-width:450px) {
+    html {
+        font-size: 50%;
+    }  
+    .more-vehicles{
+        width:100%;
+    }
+    .more-vehicles .grid-container {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr); 
+        gap: 15px;
+        width: 100%;
+      }
+    
+} 
+
